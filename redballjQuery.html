@@ -1,0 +1,129 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://storage.googleapis.com/ics-redball/redball.js"></script>
+    <script>
+    /* gotem */
+    showImg = function(){
+    x=document.getElementById("got_em")
+    x.style.visibility="visible";
+    }
+ 
+    /* redball */
+    $(document).ready(function(){
+        
+    $(".fadeout").click(function(){
+        $("#red").fadeOut()
+    });
+    
+    $(".fadein").click(function(){
+        $("#red").fadeIn();
+    });
+    
+    $(".up").click(function(){
+        $("#red").animate({"top":"-=50px"},500,"linear")
+    });
+    
+    $(".down").click(function(){
+        $("#red").animate({"top":"+=50px"},500,"linear")
+    });
+    
+    $(".left").click(function(){
+        $("#red").animate({"left":"-=50px"},500,"linear")
+    });
+    
+    $(".right").click(function(){
+        $("#red").animate({"left":"+=50px"},500,"linear")
+    });
+    
+    $(".downright").click(function(){
+        $("#red").animate({"top":"+=50px", "left":"+=50px"},500,"linear")
+    });
+    
+    $(".upright").click(function(){
+        $("#red").animate({"top":"-=50px","left":"+=50px"},500,"linear")
+    });
+    
+    $(".downleft").click(function(){
+        $("#red").animate({"top":"+=50px", "left":"-=50px"},500,"linear")
+    });
+    
+    $(".upleft").click(function(){
+        $("#red").animate({"left":"-=50px","top":"-=50px"},500,"linear")
+    });
+    
+    $(".upleft").click(function(){
+        $("#red").animate({"left":"-=50px","top":"-=50px"},500,"linear")
+    });
+    
+    $(".square").click(function(){
+        $("#red").animate({"left":"+=50px"},500,"linear"),
+        $("#red").animate({"top":"+=50px"},500,"linear"),
+        $("#red").animate({"left":"-=50px"},500,"linear"),
+        $("#red").animate({"top":"-=50px"},500,"linear")
+    });
+    
+    $(".triangle").click(function(){
+        $("#red").animate({"top":"-=50px","left":"+=50px"},500,"linear"),
+        $("#red").animate({"top":"+=50px", "left":"+=50px"},500,"linear"),
+        $("#red").animate({"left":"-=100px"},500,"linear")
+        
+    });
+    
+    $(".octagon").click(function(){
+        $("#red").animate({"left":"+=50px"},500,"linear"),
+        $("#red").animate({"top":"+=50px", "left":"+=50px"},500,"linear"),
+        $("#red").animate({"top":"+=50px"},500,"linear"),
+        $("#red").animate({"top":"+=50px", "left":"-=50px"},500,"linear"),
+        $("#red").animate({"left":"-=50px"},500,"linear"),
+        $("#red").animate({"left":"-=50px","top":"-=50px"},500,"linear"),
+        $("#red").animate({"top":"-=50px"},500,"linear"),
+        $("#red").animate({"top":"-=50px","left":"+=50px"},500,"linear")
+    });
+});
+
+    </script>
+</head>
+<body>
+       <h1>Hi. I like cats.</h1>
+       
+       <p>I have two cats.</p>
+       
+       <p>I would like more.</p>
+
+       <!--<img style="position:absolute; top:300px; left:0px, width:0px, height:0px" class="img" src="images/MittensPablo2.png">-->
+       
+       <ol>These are my cats:
+           <li>Mittens</li>
+           <li>Pablo</li>
+           <li>Ninja Cat</li>
+       </ol>
+       
+       <!--gotem test-->
+       <img id="got_em" src="images/hand.jpg" style="visibility:hidden" width="250" height="444"/>
+       <input type="submit" id="hand" value="Hi" onclick="showImg()"/>
+       
+       <!--redball jquery-->
+       <img id="red" style="position:absolute; top:300px; left:0px, width:0px, height:0px" src="images/redball.jpg"></img>
+       
+       <button class="fadeout">Fade out</button>
+       <button class="fadein">Fade in</button>
+       
+       <button class="up">up</button>
+       <button class="down">down</button>
+       <button class="right">right</button>
+       <button class="left">left</button>
+       <button class="downright">down right</button>
+       <button class="downleft">down left</button>
+       <button class="upright">up right</button>
+       <button class="upleft">up left</button>
+       
+       <button class="square">square</button>
+       <button class="triangle">triangle</button>
+       <button class="octagon">octagon</button>
+       
+      <!--<button onclick="alert('Hello');">Meow</button>-->
+       
+       
+</body>
+</html>
